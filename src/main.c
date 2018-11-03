@@ -9,6 +9,8 @@
 
 #include <stdlib.h>
 
+typedef enum { false, true } bool;
+
 int main(void)
 {
   return EXIT_SUCCESS;
