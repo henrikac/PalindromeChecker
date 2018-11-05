@@ -16,7 +16,7 @@ typedef enum { false, true } bool;
 bool is_palindrome_iter(char *str);
 bool is_palindrome_rec(char *str);
 char *talloc(size_t num_chars);
-char *get_word(FILE *f);
+char *get_string(FILE *f);
 
 int main(int argc, char *argv[])
 {
@@ -29,12 +29,15 @@ int main(int argc, char *argv[])
   }
   else
   {
-    printf("\nEnter a word: ");
-    word = get_word(stdin);
+    do
+    {
+      printf("\nEnter a word: ");
+      word = get_string(stdin);
+    } while (strlen(word) < 1);
   }
 
-  printf("\nIterative palindrome check: %s %s a palindrome", word, is_palindrome_iter(word) ? "is" : "is not");
-  printf("\nRecursive palindrome check: %s %s a palindrome", word, is_palindrome_rec(word) ? "is" : "is not");
+  printf("\nIterative palindrome check: \"%s\" %s a palindrome", word, is_palindrome_iter(word) ? "is" : "is not");
+  printf("\nRecursive palindrome check: \"%s\" %s a palindrome", word, is_palindrome_rec(word) ? "is" : "is not");
 
   if (word)
     free(word);
@@ -87,10 +90,12 @@ char *talloc(size_t num_chars)
   return p;
 }
 
-char *get_word(FILE *f)
+char *get_string(FILE *f)
 {
   int c, i = 0;
-  char *word = NULL;
+  char *word = (char*)malloc(sizeof(char));
+
+  word[0] = '\0'; /* prevents the program from crashing if the user don't enter anything */
 
   while ((c = fgetc(f)) != EOF && c != '\n')
   {
