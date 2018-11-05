@@ -16,6 +16,7 @@ typedef enum { false, true } bool;
 bool is_palindrome_iter(char *str);
 bool is_palindrome_rec(char *str);
 char *talloc(size_t num_chars);
+char *get_word(FILE *f);
 
 int main(int argc, char *argv[])
 {
@@ -26,9 +27,17 @@ int main(int argc, char *argv[])
     word = talloc(strlen(argv[1] + 1));
     strcpy(word, argv[1]);
   }
+  else
+  {
+    printf("\nEnter a word: ");
+    word = get_word(stdin);
+  }
 
   printf("\nIterative palindrome check: %s %s a palindrome", word, is_palindrome_iter(word) ? "is" : "is not");
   printf("\nRecursive palindrome check: %s %s a palindrome", word, is_palindrome_rec(word) ? "is" : "is not");
+
+  if (word)
+    free(word);
 
   return EXIT_SUCCESS;
 }
@@ -76,4 +85,19 @@ char *talloc(size_t num_chars)
     exit(EXIT_FAILURE);
   }
   return p;
+}
+
+char *get_word(FILE *f)
+{
+  int c, i = 0;
+  char *word = NULL;
+
+  while ((c = fgetc(f)) != EOF && c != '\n')
+  {
+    word = (char*)realloc(word, ++i + 1);
+    word[i - 1] = c;
+    word[i] = '\0';
+  }
+
+  return word;
 }
