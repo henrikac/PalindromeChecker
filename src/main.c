@@ -11,6 +11,12 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef _WIN32
+#define CLEAR "cls"
+#else
+#define CLEAR "clear"
+#endif
+
 typedef enum { false, true } bool;
 
 bool is_palindrome_iter(char *str);
@@ -29,6 +35,12 @@ int main(int argc, char *argv[])
   }
   else
   {
+    system(CLEAR);
+
+    printf("====================\n");
+    printf(" Palindrome Checker\n");
+    printf("====================\n");
+
     do
     {
       printf("\nEnter a word: ");
@@ -38,6 +50,7 @@ int main(int argc, char *argv[])
 
   printf("\nIterative palindrome check: \"%s\" %s a palindrome", word, is_palindrome_iter(word) ? "is" : "is not");
   printf("\nRecursive palindrome check: \"%s\" %s a palindrome", word, is_palindrome_rec(word) ? "is" : "is not");
+  printf("\n\n");
 
   if (word)
     free(word);
