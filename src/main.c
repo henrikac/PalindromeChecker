@@ -58,6 +58,11 @@ int main(int argc, char *argv[])
   return EXIT_SUCCESS;
 }
 
+/**
+ * Checks if a string is a palindrome by iterating through the string
+ * @param[in] str The string to check
+ * @return bool
+*/
 bool is_palindrome_iter(char *str)
 {
   int i;
@@ -70,6 +75,11 @@ bool is_palindrome_iter(char *str)
   return true;
 }
 
+/**
+ * A function that checks if a string is a palindrome using recursion
+ * @param[in] str The string to check
+ * @return bool
+*/
 bool is_palindrome_rec(char *str)
 {
   bool result;
@@ -92,6 +102,11 @@ bool is_palindrome_rec(char *str)
   return true;
 }
 
+/**
+ * Allocates num_chars bytes and checks if allocation is possible
+ * @param[in] num_chars Number of characters to allocate memory for
+ * @return char *
+*/
 char *talloc(size_t num_chars)
 {
   char *p = (char*)calloc(num_chars, sizeof(char));
@@ -103,6 +118,11 @@ char *talloc(size_t num_chars)
   return p;
 }
 
+/**
+ * Creates a string from input stream
+ * @param[in] f Input stream to read from
+ * @return char *
+*/
 char *get_string(FILE *f)
 {
   int c, i = 0;
