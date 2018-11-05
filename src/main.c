@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
   if (argc == 2)
   {
-    word = talloc(strlen(argv[1] + 1));
+    word = talloc(strlen(argv[1]) + 1);
     strcpy(word, argv[1]);
   }
   else
