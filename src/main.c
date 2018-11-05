@@ -15,16 +15,20 @@ typedef enum { false, true } bool;
 
 bool is_palindrome_iter(char *str);
 bool is_palindrome_rec(char *str);
+char *talloc(size_t num_chars);
 
-int main(void)
+int main(int argc, char *argv[])
 {
-  int i;
-  char *words[] = { "regninger", "paliniilap", "kajak" };
+  char *word = NULL;
 
-  for (i = 0; i < 3; i++)
+  if (argc == 2)
   {
-    printf("\n%s %s a palindrome", words[i], is_palindrome_rec(words[i]) ? "is" : "is not");
+    word = talloc(strlen(argv[1] + 1));
+    strcpy(word, argv[1]);
   }
+
+  printf("\nIterative palindrome check: %s %s a palindrome", word, is_palindrome_iter(word) ? "is" : "is not");
+  printf("\nRecursive palindrome check: %s %s a palindrome", word, is_palindrome_rec(word) ? "is" : "is not");
 
   return EXIT_SUCCESS;
 }
@@ -43,6 +47,7 @@ bool is_palindrome_iter(char *str)
 
 bool is_palindrome_rec(char *str)
 {
+  bool result;
   char *new_str = NULL;
   size_t len_str = strlen(str);
 
@@ -50,18 +55,25 @@ bool is_palindrome_rec(char *str)
     return false;
   else if (len_str > 3)
   {
-    new_str = (char*)calloc(len_str - 1, sizeof(char));
-    if (new_str == NULL)
-    {
-      printf("\nCouldn't allocate memory");
-      exit(EXIT_FAILURE);
-    }
+    new_str = talloc(len_str - 1);
     strncpy(new_str, &str[1], len_str - 2);
-    return is_palindrome_rec(new_str);
-  }
-
-  if (new_str)
+    result = is_palindrome_rec(new_str);
+    
     free(new_str);
+    
+    return result;
+  }
   
   return true;
+}
+
+char *talloc(size_t num_chars)
+{
+  char *p = (char*)calloc(num_chars, sizeof(char));
+  if (p == NULL)
+  {
+    printf("\nCouldn't allocate memory");
+    exit(EXIT_FAILURE);
+  }
+  return p;
 }
