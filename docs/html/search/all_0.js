@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bool',['bool',['../main_8c.html#af6a258d8f3ee5206d682d799316314b1',1,'main.c']]]
+  ['bool',['bool',['../palindrome_8h.html#af6a258d8f3ee5206d682d799316314b1',1,'palindrome.h']]]
 ];

@@ -66,8 +66,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">main.c File Reference</div>  </div>
@@ -76,154 +74,16 @@ $(function() {
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="palindrome_8h_source.html">palindrome.h</a>&quot;</code><br />
 </div>
 <p><a href="main_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a611cc9b5f655508482f3d7a9751c182a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a611cc9b5f655508482f3d7a9751c182a">CLEAR</a>&#160;&#160;&#160;&quot;clear&quot;</td></tr>
-<tr class="separator:a611cc9b5f655508482f3d7a9751c182a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:af6a258d8f3ee5206d682d799316314b1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af6a258d8f3ee5206d682d799316314b1">bool</a> { <a class="el" href="main_8c.html#af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c">false</a>, 
-<a class="el" href="main_8c.html#af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b">true</a>
- }</td></tr>
-<tr class="separator:af6a258d8f3ee5206d682d799316314b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0b95499d627e19b576482fee7e2cc03f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="main_8c.html#af6a258d8f3ee5206d682d799316314b1">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0b95499d627e19b576482fee7e2cc03f">is_palindrome_iter</a> (char *str)</td></tr>
-<tr class="separator:a0b95499d627e19b576482fee7e2cc03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7246d746b3b5d350e1f5f57a02d7cbae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="main_8c.html#af6a258d8f3ee5206d682d799316314b1">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7246d746b3b5d350e1f5f57a02d7cbae">is_palindrome_rec</a> (char *str)</td></tr>
-<tr class="separator:a7246d746b3b5d350e1f5f57a02d7cbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bad91ad9e3e40ea9644bb8471c0c40e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2bad91ad9e3e40ea9644bb8471c0c40e">talloc</a> (size_t num_chars)</td></tr>
-<tr class="separator:a2bad91ad9e3e40ea9644bb8471c0c40e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08da14a817640fc89f919a77b35648e7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a08da14a817640fc89f919a77b35648e7">get_string</a> (FILE *f)</td></tr>
-<tr class="separator:a08da14a817640fc89f919a77b35648e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a611cc9b5f655508482f3d7a9751c182a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a611cc9b5f655508482f3d7a9751c182a">&#9670;&nbsp;</a></span>CLEAR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CLEAR&#160;&#160;&#160;&quot;clear&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00017">17</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="af6a258d8f3ee5206d682d799316314b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6a258d8f3ee5206d682d799316314b1">&#9670;&nbsp;</a></span>bool</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="main_8c.html#af6a258d8f3ee5206d682d799316314b1">bool</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c"></a>false&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b"></a>true&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00020">20</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a08da14a817640fc89f919a77b35648e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08da14a817640fc89f919a77b35648e7">&#9670;&nbsp;</a></span>get_string()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char * get_string </td>
-          <td>(</td>
-          <td class="paramtype">FILE *&#160;</td>
-          <td class="paramname"><em>f</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Creates a string from input stream </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>Input stream to read from </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>char * </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00126">126</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-</div>
-</div>
-<a id="a0b95499d627e19b576482fee7e2cc03f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b95499d627e19b576482fee7e2cc03f">&#9670;&nbsp;</a></span>is_palindrome_iter()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="main_8c.html#af6a258d8f3ee5206d682d799316314b1">bool</a> is_palindrome_iter </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Checks if a string is a palindrome by iterating through the string </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>The string to check </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00066">66</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-</div>
-</div>
-<a id="a7246d746b3b5d350e1f5f57a02d7cbae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7246d746b3b5d350e1f5f57a02d7cbae">&#9670;&nbsp;</a></span>is_palindrome_rec()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="main_8c.html#af6a258d8f3ee5206d682d799316314b1">bool</a> is_palindrome_rec </td>
-          <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>A function that checks if a string is a palindrome using recursion </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>The string to check </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00083">83</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-</div>
-</div>
 <a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -250,34 +110,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00027">27</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
-
-</div>
-</div>
-<a id="a2bad91ad9e3e40ea9644bb8471c0c40e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bad91ad9e3e40ea9644bb8471c0c40e">&#9670;&nbsp;</a></span>talloc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char * talloc </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>num_chars</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Allocates num_chars bytes and checks if allocation is possible </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">num_chars</td><td>Number of characters to allocate memory for </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>char * </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00110">110</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8c_source.html#l00016">16</a> of file <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>

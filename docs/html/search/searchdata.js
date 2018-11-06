@@ -1,7 +1,7 @@
 var indexSectionsWithContent =
 {
-  0: "bcfgimt",
-  1: "m",
+  0: "bcfgimpt",
+  1: "mp",
   2: "gimt",
   3: "b",
   4: "ft",
