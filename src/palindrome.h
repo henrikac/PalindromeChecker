@@ -1,5 +1,5 @@
-#ifndef FUNCTIONS_H
-#define FUNCTIONS_H
+#ifndef PALINDROME_H
+#define PALINDROME_H
 
 #ifdef _WIN32
 #define CLEAR "cls"
@@ -14,4 +14,4 @@ bool is_palindrome_rec(char *str);
 char *talloc(size_t num_chars);
 char *get_string(FILE *f);
 
-#endif /* FUNCTIONS_H */
+#endif /* PALINDROME_H */
