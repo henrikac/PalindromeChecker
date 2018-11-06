@@ -6,7 +6,7 @@ TESTFILES = AllTests.c CuTest.c IsPalindromeIterTest.c IsPalindromeRecTest.c Get
 
 $(TARGET).exe: ../src/palindrome.o $(TESTFILES)
 	gcc $(CFLAGS) ../src/palindrome.o $(TESTFILES) \
-		-o test
+		-o $(TARGET)
 
 ../src/palindrome.o: ../src/palindrome.h ../src/palindrome.c
 	gcc -c ../src/palindrome.c
