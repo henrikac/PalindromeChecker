@@ -13,8 +13,9 @@ bool is_palindrome_iter(char *str)
 {
   int i;
   size_t len_str = strlen(str);
+  size_t iters = len_str % 2 == 0 ? len_str / 2 : (len_str + 1) / 2;
 
-  for (i = 0; i < len_str; i++)
+  for (i = 0; i < iters; i++)
     if (str[i] != str[(len_str - 1) - i])
       return false;
 
