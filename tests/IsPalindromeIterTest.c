@@ -1,20 +1,7 @@
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
+
 #include "CuTest.h"
-
-typedef enum { false, true } bool;
-
-bool is_palindrome_iter(char *str)
-{
-  int i;
-  size_t len_str = strlen(str);
-
-  for (i = 0; i < len_str; i++)
-    if (str[i] != str[(len_str - 1) - i])
-      return false;
-
-  return true;
-}
+#include "../src/palindrome.h"
 
 void TestIsPalindromeIter1(CuTest *tc)
 {

@@ -1,42 +1,7 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
+
 #include "CuTest.h"
-
-typedef enum { false, true } bool;
-
-char *talloc(size_t num_chars)
-{
-  char *p = (char*)calloc(num_chars, sizeof(char));
-  if (p == NULL)
-  {
-    printf("\nCouldn't allocate memory");
-    exit(EXIT_FAILURE);
-  }
-  return p;
-}
-
-bool is_palindrome_rec(char *str)
-{
-  bool result;
-  char *new_str = NULL;
-  size_t len_str = strlen(str);
-
-  if (str[0] != str[len_str - 1])
-    return false;
-  else if (len_str > 3)
-  {
-    new_str = talloc(len_str - 1);
-    strncpy(new_str, &str[1], len_str - 2);
-    result = is_palindrome_rec(new_str);
-    
-    free(new_str);
-    
-    return result;
-  }
-  
-  return true;
-}
+#include "../src/palindrome.h"
 
 void TestIsPalindromeRec1(CuTest *tc)
 {
