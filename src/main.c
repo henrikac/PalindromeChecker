@@ -1,5 +1,5 @@
 /*
- * Programmer: Henrik A. Christensen     Date Completed: in progress
+ * Programmer: Henrik A. Christensen     Date Completed: 06-11-2018
  * Instructor: Kurt Nørmark              Class:          Imperative Programming
  *
  * Write an iterativ function 'int is_palindrome_iter(char *str) that checks if str is a palindrome.
