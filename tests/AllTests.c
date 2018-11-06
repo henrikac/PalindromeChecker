@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 #include "CuTest.h"
 
 CuSuite *PalindromeIterGetSuite();
@@ -21,4 +23,6 @@ void RunAllTests(void)
 int main(void)
 {
   RunAllTests();
+
+  return EXIT_SUCCESS;
 }
