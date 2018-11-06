@@ -2,9 +2,10 @@
 
 CFLAGS = -ansi -pedantic -Wall
 TARGET = test
+TESTFILES = AllTests.c CuTest.c IsPalindromeIterTest.c IsPalindromeRecTest.c GetStringTest.c
 
-$(TARGET).exe: ../src/palindrome.o AllTests.c CuTest.c IsPalindromeIterTest.c IsPalindromeRecTest.c
-	gcc $(CFLAGS) ../src/palindrome.o AllTests.c CuTest.c IsPalindromeIterTest.c IsPalindromeRecTest.c \
+$(TARGET).exe: ../src/palindrome.o $(TESTFILES)
+	gcc $(CFLAGS) ../src/palindrome.o $(TESTFILES) \
 		-o test
 
 ../src/palindrome.o: ../src/palindrome.h ../src/palindrome.c

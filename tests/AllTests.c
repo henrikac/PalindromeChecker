@@ -3,6 +3,7 @@
 
 #include "CuTest.h"
 
+CuSuite *GetStringGetSuite();
 CuSuite *PalindromeIterGetSuite();
 CuSuite *PalindromeRecGetSuite();
 
@@ -11,6 +12,7 @@ void RunAllTests(void)
   CuString *output = CuStringNew();
   CuSuite *suite = CuSuiteNew();
 
+  CuSuiteAddSuite(suite, GetStringGetSuite());
   CuSuiteAddSuite(suite, PalindromeIterGetSuite());
   CuSuiteAddSuite(suite, PalindromeRecGetSuite());
 
